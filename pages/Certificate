@@ -17,7 +17,7 @@
         </div>
 
         <nav class="dash-nav">
-            <a href="Certificate.html" class="active">📄 Certificate</a>
+            <a href="Certificatel" class="active">📄 Certificate</a>
             <a href="foto.html">📷 Foto-foto</a>
             <a href="jadwal.html">🗓️ Jadwal</a>
             <a href="tamu.html" class="pill-btn">📃buku tamu</a>

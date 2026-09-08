@@ -37,7 +37,7 @@
                     <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-group-textarea">
                     <label for="komentar">Komentar</label>
                     <textarea id="komentar" name="komentar" rows="4" placeholder="Tulis komentar atau pesan kamu di sini..." required></textarea>
                 </div>
@@ -48,7 +48,7 @@
         </section>
 
         <section class="dash-section">
-            <h3>Pesan Pengunjung</h3>
+            <h3 class="guest-title">💬 Pesan dari Pengunjung</h3>
             <ul id="guestList" class="guest-list">
                 <li class="guest-empty" id="guestEmpty">Belum ada pesan. Jadilah yang pertama menulis! 👋</li>
             </ul>
@@ -63,7 +63,7 @@
     <script>
         // GANTI URL DI BAWAH INI dengan URL Web App Apps Script kamu sendiri
         // Contoh: "https://script.google.com/macros/s/XXXXXXXXXXXX/exec"
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyMKvEf0mvmZ0cYhi_kyTksrH3aY4BtcEMiHniGTSoqbjzYxABsrb0wiOHiBKE5r9Jq/exec";
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxn-YWnDUXU8RktF7almSEdzJGwZeaMx1IOWGpc979cV53IiZxAp85YlNJk9nkWeLF_AA/exec";
 
         const form = document.getElementById("guestForm");
         const list = document.getElementById("guestList");

@@ -1,0 +1,54 @@
+/* ===== Angry Bird page ===== */
+.ab-stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #2b1f4d;
+    font-weight: 600;
+}
+
+.ab-canvas-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1.5px solid #e4ddff;
+    background: linear-gradient(180deg, #bfe3ff 0%, #eaf6ff 65%, #d7f2c9 100%);
+}
+
+#abCanvas {
+    display: block;
+    width: 100%;
+    height: 380px;
+    touch-action: none;
+}
+
+.ab-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: rgba(43, 31, 77, 0.6);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+}
+
+.ab-overlay.hidden {
+    display: none;
+}
+
+.ab-hint {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}

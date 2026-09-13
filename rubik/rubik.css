@@ -1,0 +1,237 @@
+/* ===== Rubik's Cube page ===== */
+.rubik-stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #2b1f4d;
+}
+
+.rubik-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #2b1f4d;
+}
+
+.rubik-player input {
+    border: 1.5px solid #e4ddff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #2b1f4d;
+    background: #faf9ff;
+    outline: none;
+    max-width: 180px;
+}
+
+.rubik-player input:focus {
+    border-color: #6a5cff;
+}
+
+.rubik-scene-wrap {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 900px;
+    margin-bottom: 12px;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+}
+
+.rubik-scene-wrap:active {
+    cursor: grabbing;
+}
+
+.rubik-scene {
+    transform-style: preserve-3d;
+    transform: rotateX(-25deg) rotateY(-35deg);
+}
+
+.rubik-cube {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.cubie {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: -28px;
+    left: -28px;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #2b1f4d;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.face-F { transform: translateZ(28px); }
+.face-B { transform: rotateY(180deg) translateZ(28px); }
+.face-R { transform: rotateY(90deg) translateZ(28px); }
+.face-L { transform: rotateY(-90deg) translateZ(28px); }
+.face-U { transform: rotateX(90deg) translateZ(28px); }
+.face-D { transform: rotateX(-90deg) translateZ(28px); }
+
+.layer-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+}
+
+.rubik-status {
+    text-align: center;
+    font-weight: 700;
+    color: #4caf50;
+    min-height: 20px;
+    margin-bottom: 8px;
+}
+
+.rubik-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.control-group {
+    display: flex;
+    gap: 8px;
+}
+
+.control-group button {
+    width: 46px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1.5px solid #e4ddff;
+    background: #faf9ff;
+    color: #5b3fd6;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.control-group button:hover {
+    background: #e4ddff;
+    transform: translateY(-1px);
+}
+
+.rubik-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.btn-shuffle {
+    background: #6a5cff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-shuffle:hover {
+    background: #5b3fd6;
+}
+
+.rubik-hint {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+}
+
+.rubik-leaderboard {
+    max-width: 420px;
+    margin: 0 auto;
+    background: #faf9ff;
+    border: 1.5px solid #e4ddff;
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.rubik-leaderboard h3 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #2b1f4d;
+}
+
+.leaderboard-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.leaderboard-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #eee6ff;
+    font-size: 13px;
+    color: #2b1f4d;
+}
+
+.leaderboard-list li.lb-highlight {
+    background: #ece7ff;
+    border-color: #6a5cff;
+    font-weight: 700;
+}
+
+.leaderboard-list .lb-rank {
+    width: 28px;
+    flex-shrink: 0;
+    color: #6a5cff;
+    font-weight: 700;
+}
+
+.leaderboard-list .lb-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.leaderboard-list .lb-time {
+    font-variant-numeric: tabular-nums;
+    color: #5b3fd6;
+}
+
+.leaderboard-list .lb-moves {
+    font-size: 11px;
+    color: #888;
+    flex-shrink: 0;
+}
+
+.leaderboard-empty {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+@media (max-width: 400px) {
+    .rubik-scene-wrap { height: 240px; }
+    .control-group button { width: 40px; height: 36px; font-size: 12px; }
+}

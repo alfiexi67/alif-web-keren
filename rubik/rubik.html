@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubik's Cube - Muh. Alif Fadilah</title>
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="rubik.css">
+</head>
+<body>
+<div class="card wide rubik-page">
+  <div class="dash-header">
+    <h1>🧩 Rubik's Cube</h1>
+    <a href="../../pages/game.html" class="btn btn-keluar">← Kembali</a>
+  </div>
+
+  <div class="rubik-stats">
+    <span>Langkah: <b id="moveCount">0</b></span>
+    <span>Waktu: <b id="timer">00:00:00</b></span>
+  </div>
+
+  <div class="rubik-player">
+    <label for="playerName">Nama:</label>
+    <input type="text" id="playerName" placeholder="Masukkan nama..." maxlength="20">
+  </div>
+
+  <div class="rubik-scene-wrap" id="sceneWrap">
+    <div class="rubik-scene" id="scene">
+      <div class="rubik-cube" id="cube"></div>
+    </div>
+  </div>
+
+  <p class="rubik-status" id="status"></p>
+
+  <div class="rubik-controls">
+    <div class="control-group">
+      <button data-move="U">U➡️</button>
+      <button data-move="U'">U⬅️</button>
+      <button data-move="D">D⬅️</button>
+      <button data-move="D'">D➡️</button>
+    </div>
+    <div class="control-group">
+      <button data-move="L">L⬇️</button>
+      <button data-move="L'">L⬆️</button>
+      <button data-move="R">R⬇️</button>
+      <button data-move="R'">R⬆️</button>
+    </div>
+    <div class="control-group">
+      <button data-move="F">F⬅️</button>
+      <button data-move="F'">F➡️</button>
+      <button data-move="B">B⬅️</button>
+      <button data-move="B'">B➡️</button>
+    </div>
+  </div>
+
+  <div class="rubik-actions">
+    <button id="shuffleBtn" class="btn btn-shuffle">🔀 Acak</button>
+    <button id="pauseBtn" class="btn btn-pause" disabled>⏸️ Pause</button>
+    <button id="resetBtn" class="btn btn-keluar">↺ Reset</button>
+  </div>
+
+  <p class="rubik-hint">Seret area kubus untuk memutar sudut pandang. Gunakan tombol di bawah untuk memutar tiap sisi (U/D/L/R/F/B, tanda ' = arah berlawanan). Waktu mulai berjalan setelah kubus selesai diacak.</p>
+
+  <div class="rubik-leaderboard">
+    <h3>🏆 Papan Skor Tercepat</h3>
+    <ol id="leaderboardList" class="leaderboard-list"></ol>
+    <p class="leaderboard-empty" id="leaderboardEmpty">Belum ada rekor. Acak lalu selesaikan kubus untuk masuk papan skor!</p>
+  </div>
+</div>
+<script src="rubik.js"></script>
+</body>
+</html>
